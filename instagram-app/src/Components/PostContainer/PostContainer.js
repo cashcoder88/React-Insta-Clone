@@ -1,10 +1,10 @@
 import React from 'react';
-import CommentSection from '../CommentSection/CommentSection';
+import Post from './Post';
 
 function PostContainer(props) {
     return (
         <div>
-            {props.posts.map((comment, i) => <CommentSection key={i} comments={comment} /> )}
+            {props.posts.map((post, i) => <Post key={i} post={post} /> )}
         </div>
     )
 }

@@ -9,7 +9,7 @@ const SearchBar = () => {
                 {/* <img></img> */}
             </div>
         <div>
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Search..." />
         </div>
         <div className="social-icons">
             <div className="social">

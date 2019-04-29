@@ -1,11 +1,10 @@
 import React from 'react';
 
-function Comment(props) {
+const Comment = props => {
     return (
         <div className='comment-info'>
-            <span className='comment-user'>{props.comments.username}</span>
-            <span className='comment-text'>{props.comments.text}</span>
-
+            <span className='comment-user'>{props.comment.username}</span>
+            <span className='comment-text'>{props.comment.text}</span>
         </div>
     )
 }
