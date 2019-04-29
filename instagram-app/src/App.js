@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import './App.css';
 import PostContainer from './Components/PostContainer/PostContainer';
-// import SearchBar from './Components/SearchBar/SearchBar';
+import SearchBar from './Components/SearchBar/SearchBar';
 
 class App extends Component {
   constructor() {
@@ -14,8 +14,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <SearchBar /> */}
-        <PostContainer posts={this.state.posts.map(postObject => (postObject) )} />
+        <SearchBar />
+        <PostContainer posts={this.state.posts} />
       </div>
     );
   }

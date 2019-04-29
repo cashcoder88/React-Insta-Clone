@@ -3,7 +3,9 @@ import CommentSection from '../CommentSection/CommentSection';
 
 function PostContainer(props) {
     return (
-      <CommentSection comments={props.posts.comments.map(commentObject => (commentObject))} />
+        <div>
+            {props.posts.map((comment, i) => <CommentSection key={i} comments={comment} /> )}
+        </div>
     )
 }
 
