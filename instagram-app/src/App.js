@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import './App.css';
+import PostContainer from './Components/PostContainer/PostContainer';
 
 class App extends Component {
   constructor() {
@@ -12,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        Testing 123
+        <PostContainer posts={this.state.posts} />
       </div>
     );
   }
