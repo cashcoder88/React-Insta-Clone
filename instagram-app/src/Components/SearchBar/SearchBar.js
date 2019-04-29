@@ -1,12 +1,29 @@
 import React from 'react';
+import './SearchBar.css';
 
-function SearchBar() {
+const SearchBar = () => {
     return (
-        <div className='search-bar-container'>
-            <h1>THIS IS SEARCHBAR COMPONENT</h1>
+        <div className="sb-wrapper">
+            <div className="sb-logo">
+                <h1>INSTAGRAM</h1>
+                {/* <img></img> */}
+            </div>
+        <div>
+            <input type="text" placeholder="Search" />
+        </div>
+        <div className="social-icons">
+            <div className="social">
+                <i />
+            </div>
+            <div className="social">
+                <i />
+            </div>
+            <div className="social">
+                <i />
+            </div>
+        </div>
         </div>
     )
 }
 
-
-export default SearchBar;
+export default SearchBar; 
