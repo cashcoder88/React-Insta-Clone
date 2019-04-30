@@ -1,0 +1,27 @@
+.post-container {
+    display: flex;
+    /* border: 1px solid red; */
+    flex-direction: column;
+    float: left;
+    margin: 50px;
+    /* padding: 10px; */
+}
+
+.post-header-container {
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+
+}
+
+.post-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    
+}
+
+.ph-image {
+    margin: 5px;
+}
+

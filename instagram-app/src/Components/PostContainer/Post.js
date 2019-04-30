@@ -5,8 +5,9 @@ import './PostContainer.css'
 
 function Post(props) {
     return (
-        <div>
+        <div className='post-container'>
             <PostHeader 
+                className='post-header-class'
                 username={props.post.username}
                 thumbnailUrl={props.post.thumbnailUrl}
             />
