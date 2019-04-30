@@ -19,23 +19,17 @@ class CommentSection extends React.Component {
 };
 
 
+  CommentSection.propTypes = {
+      comments: PropTypes.arrayOf(
+          PropTypes.shape(
+              { 
+                  text: PropTypes.string, 
+                  username: PropTypes.sring
+              })
+        )
+  }
 
 export default CommentSection;
 
-// class CommentSection extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = {
-//         comments: props.comments
-//       };
-//     }
-//     render() {
-//       return (
-//         <div>
-//           {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-//           <CommentInput />
-//         </div>
-//       );
-//     }
-//   }
+
   
