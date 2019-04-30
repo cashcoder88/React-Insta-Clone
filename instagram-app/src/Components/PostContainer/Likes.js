@@ -3,8 +3,8 @@ import React from 'react';
 
 const Likes = props => {
     return (
-        <div className='likes-main' onClick={props.incrementLikes}>
-            <div className='icon-wrap'>
+        <div className='likes-main'>
+            <div className='icon-wrap' onClick={props.incrementLikes}>
                 {/* need heart icon here */}
                 <p>Heart</p>
             </div>
