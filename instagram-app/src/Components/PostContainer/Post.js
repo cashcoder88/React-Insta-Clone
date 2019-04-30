@@ -4,24 +4,40 @@ import PostHeader from './PostHeader';
 import Likes from './Likes';
 import './PostContainer.css'
 
-function Post(props) {
-    return (
-        <div className='post-container'>
-            <PostHeader 
-                username={props.post.username}
-                thumbnailUrl={props.post.thumbnailUrl}
-            />
-            <div>
-                <img 
-                    alt="post main thumbnail"
-                    className="post-image"
-                    src={props.post.imageUrl}
+class Post extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            likes: props.post.likes
+        }
+    }
+
+    incrementLike = () => {
+        let likes = this.state.likes + 1;
+        this.setState({
+            likes
+        })
+    }
+    render() {
+        return (
+            <div className='post-container'>
+                <PostHeader 
+                    username={this.props.post.username}
+                    thumbnailUrl={this.props.post.thumbnailUrl}
                 />
+                <div>
+                    <img 
+                        alt="post main thumbnail"
+                        className="post-image"
+                        src={this.props.post.imageUrl}
+                    />
+                </div>
+                <Likes incrementLikes={this.incrementLike} likes={this.state.likes}/>
+                <CommentSection comments={this.props.post.comments} />
             </div>
-            <Likes />
-            <CommentSection comments={props.post.comments} />
-        </div>
-    );
+        );
+    }
+
 };
 
 
