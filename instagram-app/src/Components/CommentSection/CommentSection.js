@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
+import PropTypes from 'prop-types';
 
 class CommentSection extends React.Component {
     constructor(props) {
