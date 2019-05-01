@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import dummyData from './dummy-data';
 import PostsPage from './Components/PostContainer/PostsPage';
 import './App.css';
 
