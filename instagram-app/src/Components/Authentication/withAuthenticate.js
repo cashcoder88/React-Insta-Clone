@@ -1,6 +1,7 @@
 import React from 'react';
 
-const withAuthenticate = PassedInComp => class extends React.Component {
+const withAuthenticate = PassedInComp => 
+class extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -10,7 +11,7 @@ const withAuthenticate = PassedInComp => class extends React.Component {
 
     render() {
         return (
-
+            <PassedInComp />
         )
     }
 }
