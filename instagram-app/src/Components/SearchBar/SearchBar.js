@@ -3,10 +3,10 @@ import './SearchBar.css';
 import styled from 'styled-components';
 
 const WrapperDiv = styled.div`
-    border: 1px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 5px 5px 6px grey;
 `;
 
 const SocialIconsDiv = styled.div`
@@ -19,14 +19,18 @@ const IconDiv = styled.div`
     margin: 0 10px;
 `;
 
+const InstaDiv = styled.div`
+    font-size: 35px;
+`;
+
+
+
 const SearchBar = (props) => {
     return (
     <WrapperDiv>
-            <div className="sb-logo">
-                <i class="fab fa-instagram"></i>
-                <h1>INSTAGRAM</h1>
-                {/* <img></img> */}
-            </div>
+            <InstaDiv>
+                <i class="fab fa-instagram">{' '} | {' '} INSTAGRAM</i>
+            </InstaDiv>
         <div className='search-input'>
             <input type="text" placeholder="Search..." onChange={props.searchPosts}/>
         </div>
