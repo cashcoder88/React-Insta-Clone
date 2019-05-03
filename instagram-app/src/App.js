@@ -6,6 +6,7 @@ import LoginPage from './Components/Login/LoginPage'
 import './App.css';
 
 
+
 class App extends Component {
   constructor() {
     super();
@@ -17,7 +18,7 @@ class App extends Component {
   
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <ComponentFromWithAuthenticate />
       </div>
     );

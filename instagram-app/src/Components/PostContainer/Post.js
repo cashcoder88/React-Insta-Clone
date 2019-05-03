@@ -2,7 +2,17 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 import Likes from './Likes';
+import styled from 'styled-components';
 import './PostContainer.css'
+
+
+const PostContainerDiv = styled.div`
+    display: flex;
+    box-shadow: 5px 5px 6px grey;
+    flex-direction: column;
+    float: left;
+    margin: 50px;
+`;
 
 class Post extends React.Component {
     constructor(props) {
@@ -20,7 +30,7 @@ class Post extends React.Component {
     }
     render() {
         return (
-            <div className='post-container'>
+            <PostContainerDiv>
                 <PostHeader 
                     username={this.props.post.username}
                     thumbnailUrl={this.props.post.thumbnailUrl}
@@ -34,7 +44,7 @@ class Post extends React.Component {
                 </div>
                 <Likes incrementLikes={this.incrementLike} likes={this.state.likes}/>
                 <CommentSection comments={this.props.post.comments} />
-            </div>
+            </PostContainerDiv>
         );
     }
 

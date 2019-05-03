@@ -1,14 +1,6 @@
-.post-container {
-    display: flex;
-    /* border: 1px solid red; */
-    flex-direction: column;
-    float: left;
-    margin: 50px;
-    /* padding: 10px; */
-}
 
 .post-header-container {
-    /* border: 1px solid blue; */
+    box-shadow: 5px 5px 6px grey;
     display: flex;
     align-items: center;
 

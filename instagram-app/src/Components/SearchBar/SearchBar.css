@@ -1,8 +1,5 @@
 .search-container {
-    border: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
 }
   
 .search-input {
@@ -10,11 +7,10 @@
 }
 
 .social-icons {
-    display: flex;
+    
     
 }
 
 .icon {
-    flex-direction: column;
-    margin: 0 10px;
+
 }
