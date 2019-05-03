@@ -1,6 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const WrapperDiv = styled.div`
     border: 1px solid black;
@@ -14,6 +14,7 @@ const SocialIconsDiv = styled.div`
 `;
 
 const IconDiv = styled.div`
+    font-size: 30px;
     flex-direction: column;
     margin: 0 10px;
 `;
@@ -22,6 +23,7 @@ const SearchBar = (props) => {
     return (
     <WrapperDiv>
             <div className="sb-logo">
+                <i class="fab fa-instagram"></i>
                 <h1>INSTAGRAM</h1>
                 {/* <img></img> */}
             </div>
@@ -30,16 +32,13 @@ const SearchBar = (props) => {
         </div>
         <SocialIconsDiv>
             <IconDiv>
-                <i />
-                <p>Icon1</p>
+                <i class="far fa-clock"></i>
             </IconDiv>
             <IconDiv>
-                <i />
-                <p>Icon2</p>
+                <i class="far fa-heart"></i>
             </IconDiv>
             <IconDiv>
-                <i />
-                <p>Icon3</p>
+                <i class="far fa-user"></i>
             </IconDiv>
         </SocialIconsDiv>
     </WrapperDiv>

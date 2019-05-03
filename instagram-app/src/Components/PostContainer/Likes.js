@@ -1,21 +1,37 @@
-
 import React from 'react';
+import styled from 'styled-components';
+
+const IconWrap = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+const Icon = styled.div`
+    flex-direction: row;
+    font-size: 25px;
+    margin: 10px;
+    flex-wrap: wrap;
+`;
+
+const LikesNum = styled.div`
+    flex-direction: column;
+    flex-wrap: wrap;
+`;
+
 
 const Likes = props => {
     return (
-        <div className='likes-main'>
-            <div className='icon-wrap' onClick={props.incrementLikes}>
-                {/* need heart icon here */}
-                <p>Heart</p>
-            </div>
-            <div className="like-section-wrapper">
-                {/* Need comment icon here */}
-                <p>Comment</p>
-            </div>
-            <div className='likes-number'>
-                <div>{props.likes}</div>
-            </div>
-        </div>
+        <IconWrap>
+            <Icon onClick={props.incrementLikes}>
+                <i class="far fa-heart"></i>
+            </Icon>
+            <Icon>
+                <i class="far fa-comment"></i> 
+            </Icon> 
+            <LikesNum>
+                <div>{props.likes} likes</div>
+            </LikesNum>
+        </IconWrap>
     )
 }
 
