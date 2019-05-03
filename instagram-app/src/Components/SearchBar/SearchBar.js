@@ -1,9 +1,26 @@
 import React from 'react';
 import './SearchBar.css';
+import styled from 'styled-components'
+
+const WrapperDiv = styled.div`
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+const SocialIconsDiv = styled.div`
+    display: flex;
+`;
+
+const IconDiv = styled.div`
+    flex-direction: column;
+    margin: 0 10px;
+`;
 
 const SearchBar = (props) => {
     return (
-    <div className="search-container">
+    <WrapperDiv>
             <div className="sb-logo">
                 <h1>INSTAGRAM</h1>
                 {/* <img></img> */}
@@ -11,21 +28,21 @@ const SearchBar = (props) => {
         <div className='search-input'>
             <input type="text" placeholder="Search..." onChange={props.searchPosts}/>
         </div>
-        <div className="social-icons">
-            <div className="icon">
+        <SocialIconsDiv>
+            <IconDiv>
                 <i />
                 <p>Icon1</p>
-            </div>
-            <div className="icon">
+            </IconDiv>
+            <IconDiv>
                 <i />
                 <p>Icon2</p>
-            </div>
-            <div className="icon">
+            </IconDiv>
+            <IconDiv>
                 <i />
                 <p>Icon3</p>
-            </div>
-        </div>
-    </div>
+            </IconDiv>
+        </SocialIconsDiv>
+    </WrapperDiv>
     )
 }
 
