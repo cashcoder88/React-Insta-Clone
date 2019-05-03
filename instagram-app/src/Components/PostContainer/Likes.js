@@ -9,7 +9,7 @@ const IconWrap = styled.div`
 const Icon = styled.div`
     flex-direction: row;
     font-size: 25px;
-    margin: 10px;
+    margin: 5px;
     flex-wrap: wrap;
 `;
 

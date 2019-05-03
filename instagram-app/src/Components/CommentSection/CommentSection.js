@@ -5,7 +5,24 @@ import styled from 'styled-components';
 
 
 const CommentDiv = styled.div`
-   margin: 10px;
+    display: flex;
+    margin: 0 10px;
+    flex-direction: column;
+    align-items: flex-start;
+`;
+
+const FormStyle = styled.form`
+    display: flex;
+    justify-content: center;
+`;
+
+const InputStyle = styled.input`
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
 `;
 
 class CommentSection extends React.Component {
@@ -34,14 +51,14 @@ class CommentSection extends React.Component {
         return (
             <CommentDiv>
                 {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-                <form onSubmit={this.addNewComment}>
-                    <input 
+                <FormStyle onSubmit={this.addNewComment}>
+                    <InputStyle 
                     type="text" 
                     placeholder="Add New Comment..." 
                     value={this.state.comment} 
                     onChange={this.commentHandler}
                     />
-                </form>
+                </FormStyle>
             </CommentDiv>
 
         );
