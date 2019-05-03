@@ -7,6 +7,7 @@ const WrapperDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     box-shadow: 5px 5px 6px grey;
+    margin: 5px 10px;
     
 `;
 
